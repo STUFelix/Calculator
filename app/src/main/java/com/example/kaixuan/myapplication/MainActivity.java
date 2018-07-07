@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     clear_flag = false;
                     text.setText("");
                 }
-                str += " " + ((Button) v).getText() + " ";
+                str +=((Button) v).getText();
                 text.setText(str);
                 break;
 
@@ -263,43 +263,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         else if (exp.contains("sin") || exp.contains("cos") || exp.contains("tan")) {
 
-            try{String string;
+            try{
+                String string;
             String op = exp.substring(exp.indexOf(" ")+1, exp.indexOf(" ") + 4);
             String param2 = exp.substring(exp.indexOf(" ") + 5);
-            //Double arg2= Double.parseDouble(param2);
             Double arg2;
 
+            final double pi = 3.1415926353;
             switch (param2){
             case"π":
-                arg2 = Double.valueOf(3.1415926353);
+                arg2 = 3.1415926353;
                 break;
-            case"e":
-                arg2 = 2.7182818284;
-                break;              //没实现！！
              default:
                  arg2 =Double.parseDouble(param2);
             }
-            //if(exp.contains("π")){
-              //arg2 = 3.1415926535;
-            //}else if(param2.equals("e")) {
-                //arg2 = 2.7182818284;
-            //}else{
-                //arg2 = Double.parseDouble(param2);}
-
 
             switch (op) {
                 case "sin":
-                    result = (int)(Math.sin(arg2)*100);
+                    result = (int)(Math.sin(arg2/180*pi)*100);
                     string = result/100.0 + "";
                     text.setText(string);
                     break;
                 case "cos":
-                    result = (int)(Math.cos(arg2)*100);
+                    result = (int)(Math.cos(arg2/180*pi)*100);
                     string = result/100.0 + "";
                     text.setText(string);
                     break;
                 case "tan":
-                    result = (int) (Math.tan(arg2)*100);
+                    result = (int) (Math.tan(arg2/180*pi)*100);
                     string = result/100.0 + "";
                     text.setText(string);
                     break;
@@ -312,32 +303,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         else if (exp.contains("!")) {
-        String    param2 = exp.substring(exp.indexOf(" ") + 3);
-        Double    arg2 = Double.parseDouble(param2);
+        try{
+            String    param2 = exp.substring(exp.indexOf(" ") + 3);
+            int    arg2 = Integer.parseInt(param2);
             String string;
-            int tmpResult = 1;
+            long tmpResult = 1;
             for (int i = 1; i <=  arg2; i++)
                 tmpResult = tmpResult * i;
             result = tmpResult;
             string = result + "";
             text.setText(string);
+        }catch(NumberFormatException e){
+            text.setText("Factorial No Include . ");
+        }
         }
 
         else if (exp.contains("ln") || exp.contains("log")) {
-            if (exp.equals("ln")) {
-                String param2 = exp.substring(exp.indexOf(" ") + 4);
-                Double arg2 = Double.parseDouble(param2);
-                String string;
-                result = Math.log(arg2);
-                string = result + "";
-                text.setText(string);
+            try {
+                if (exp.equals("ln")) {
+                    String param2 = exp.substring(exp.indexOf(" ") + 4);
+                    Double arg2;
 
-            } else {
-               String param2 = exp.substring(exp.indexOf(" ") + 4);
-               Double arg2 = Double.parseDouble(param2);
-                result = Math.log10(arg2);
-                String string = result + "";
-                text.setText(string);
+                    switch (param2) {
+                        case "e":
+                            arg2 = 2.7182818284;
+                            break;
+                        default:
+                            arg2 = Double.parseDouble(param2);
+                    }
+                    String string;
+                    result = Math.log(arg2);
+                    string = result + "";
+                    text.setText(string);
+
+                } else {
+                    String param2 = exp.substring(exp.indexOf(" ") + 4);
+                    Double arg2 = Double.parseDouble(param2);
+                    result = Math.log10(arg2);
+                    String string = result + "";
+                    text.setText(string);
+                }
+            }catch(NumberFormatException e){
+                text.setText("error ");
             }
 
         }
