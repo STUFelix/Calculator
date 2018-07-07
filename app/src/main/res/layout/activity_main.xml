@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="0dp"
         android:background="#3f1f724f"
         android:gravity="end|bottom"
         android:hint="欢迎使用！"
@@ -27,10 +27,10 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
         android:text="AC" />
 
     <Button
@@ -41,6 +41,7 @@
         android:layout_alignBottom="@+id/button3"
         android:layout_toEndOf="@+id/button3"
         android:layout_toRightOf="@+id/button3"
+        android:background="#F5A5DCf1"
         android:text="÷" />
 
     <Button
@@ -51,6 +52,7 @@
         android:layout_alignBottom="@+id/button4"
         android:layout_toRightOf="@+id/button4"
         android:layout_toEndOf="@+id/button4"
+        android:background="#F5A5DCf1"
         android:text="×"/>
 
     <Button
@@ -60,6 +62,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button3"
+        android:background="#F5F5DC11"
         android:text="7" />
 
     <Button
@@ -69,6 +72,7 @@
         android:layout_below="@+id/button4"
         android:layout_toEndOf="@+id/button3"
         android:layout_toRightOf="@+id/button3"
+        android:background="#F5F5DC11"
         android:text="8" />
 
     <Button
@@ -78,6 +82,7 @@
         android:layout_alignBottom="@+id/button7"
         android:layout_toEndOf="@+id/button4"
         android:layout_toRightOf="@+id/button4"
+        android:background="#F5F5DC11"
         android:text="9" />
 
     <Button
@@ -101,6 +106,7 @@
         android:layout_below="@+id/button5"
         android:layout_toEndOf="@+id/button8"
         android:layout_toRightOf="@+id/button8"
+        android:background="#F5A5DCf1"
         android:text="-" />
 
     <Button
@@ -110,6 +116,7 @@
         android:layout_below="@+id/button6"
         android:layout_toLeftOf="@+id/button7"
         android:layout_toStartOf="@+id/button7"
+        android:background="#F5F5DC11"
         android:text="4" />
 
     <Button
@@ -119,6 +126,7 @@
         android:layout_alignBottom="@+id/button11"
         android:layout_toEndOf="@+id/button6"
         android:layout_toRightOf="@+id/button6"
+        android:background="#F5F5DC11"
         android:text="5" />
 
     <Button
@@ -128,6 +136,7 @@
         android:layout_below="@+id/button8"
         android:layout_toEndOf="@+id/button12"
         android:layout_toRightOf="@+id/button12"
+        android:background="#F5F5DC11"
         android:text="6" />
 
     <Button
@@ -137,6 +146,7 @@
         android:layout_alignBottom="@+id/button13"
         android:layout_toEndOf="@+id/button8"
         android:layout_toRightOf="@+id/button8"
+        android:background="#F5A5DCf1"
         android:text="+" />
 
     <Button
@@ -146,6 +156,7 @@
         android:layout_below="@+id/button11"
         android:layout_toLeftOf="@+id/button12"
         android:layout_toStartOf="@+id/button12"
+        android:background="#F5F5DC11"
         android:text="1" />
 
     <Button
@@ -155,6 +166,7 @@
         android:layout_below="@+id/button11"
         android:layout_toEndOf="@+id/button11"
         android:layout_toRightOf="@+id/button11"
+        android:background="#F5F5DC11"
         android:text="2" />
 
     <Button
@@ -164,6 +176,7 @@
         android:layout_below="@+id/button13"
         android:layout_toEndOf="@+id/button16"
         android:layout_toRightOf="@+id/button16"
+        android:background="#F5F5DC11"
         android:text="3" />
 
     <Button
@@ -174,6 +187,7 @@
         android:layout_marginTop="0dp"
         android:layout_toStartOf="@+id/button17"
         android:layout_toLeftOf="@+id/button17"
+        android:background="#F5F5DC11"
         android:text="0" />
 
     <Button
@@ -193,6 +207,7 @@
         android:layout_below="@+id/button13"
         android:layout_toEndOf="@+id/button17"
         android:layout_toRightOf="@+id/button17"
+        android:background="#ff1f7fff"
         android:text="=" />
 
     <Button
@@ -203,6 +218,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="2dp"
         android:layout_toStartOf="@+id/button23"
+        android:background="#f5bEeCDF"
         android:text="sin" />
 
     <Button
@@ -210,19 +226,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button19"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-1dp"
+
+        android:layout_toRightOf="@+id/button3"
         android:layout_toEndOf="@+id/button3"
+        android:background="#f5bEeCDF"
         android:text="cos" />
 
     <Button
         android:id="@+id/button24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button19"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="-2dp"
+        android:layout_below="@+id/button20"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/button3"
+        android:background="#f5bEeCDF"
         android:text="tan" />
 
     <Button
@@ -231,8 +249,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button19"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="-3dp"
+        android:layout_marginTop="3dp"
         android:layout_toEndOf="@+id/button3"
+        android:background="#f5bEeCDF"
         android:text="π" />
 
     <Button
@@ -273,8 +292,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button24"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="-3dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="-2dp"
         android:layout_marginBottom="-333dp"
         android:text="ln" />
 
@@ -285,11 +304,9 @@
         android:layout_below="@+id/button25"
         android:layout_alignParentStart="true"
         android:layout_marginStart="264dp"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="-4dp"
         android:layout_marginBottom="-333dp"
         android:text="log" />
-
-
 
 
 </RelativeLayout>
